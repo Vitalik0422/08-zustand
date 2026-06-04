@@ -7,8 +7,6 @@ import {
 import NotesFilterListClient from './Notes.client';
 import { TagType } from '@/types/note';
 import { Metadata } from 'next';
-import { redirect } from 'next/dist/server/api-utils';
-import { notFound } from 'next/navigation';
 
 interface FilterNotesProps {
   params: Promise<{ slug: TagType }>;

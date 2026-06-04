@@ -8,7 +8,6 @@ import { fetchNotes } from '@/lib/api';
 import { TagType } from '@/types/note';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
 import { ChangeEvent, useState } from 'react';
 import { MutatingDots } from 'react-loader-spinner';
 import { useDebounce } from 'use-debounce';
