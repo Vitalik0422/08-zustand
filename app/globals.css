@@ -3,9 +3,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --main-color: #4f8ce7;
 }
 
 body {
+  font-family: var(--font-roboto), sans-serif;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   width: 90%;

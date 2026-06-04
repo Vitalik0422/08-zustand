@@ -1,5 +1,5 @@
 'use client';
-import Modal from '@/components/Modal/Modal';
+import css from './CreateNote.module.css';
 import NoteForm from '@/components/NoteForm/NoteForm';
 import { useRouter } from 'next/navigation';
 
@@ -9,9 +9,12 @@ const NoteCreateModal = () => {
     router.back();
   };
   return (
-    <Modal onClose={handleCloseModal}>
-      <NoteForm onClose={handleCloseModal} />
-    </Modal>
+    <main className={css.main}>
+      <div className={css.container}>
+        <h1 className={css.title}>Create note</h1>
+        <NoteForm onClose={handleCloseModal} />
+      </div>
+    </main>
   );
 };
 

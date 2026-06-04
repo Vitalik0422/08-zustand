@@ -1,4 +1,39 @@
+import { Metadata } from 'next';
 import css from '../src/styles/home.module.css';
+
+export const metadata: Metadata = {
+  title: 'Home | NoteHub',
+  description: 'Home page in NoteHub with a description of the site.',
+  robots: {
+    index: false,
+    follow: false,
+  },
+  openGraph: {
+    title: 'Home | NoteHub',
+    description: 'Home page in NoteHub with a description of the site.',
+    type: 'website',
+    siteName: 'Home | NoteHub',
+    images: [
+      {
+        url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Home | NoteHub',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Home| NoteHub',
+    description: 'Home page in NoteHub with a description of the site.',
+    images: [
+      {
+        url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',
+        alt: 'Home | NoteHub',
+      },
+    ],
+  },
+};
 
 export default function Home() {
   return (

@@ -8,9 +8,7 @@ const Header = () => {
       <Link href="/" aria-label="Home">
         NoteHub
       </Link>
-      <Link href="/notes/create" className={css.createNoteLinkBtn}>
-        Create note +
-      </Link>
+
       <nav aria-label="Main Navigation">
         <ul className={css.navigation}>
           <li>

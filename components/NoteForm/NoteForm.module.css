@@ -12,6 +12,26 @@
   color: #212529;
 }
 
+.titleErrText,
+.titleErrTextArea {
+  color: #e55454;
+  display: none;
+}
+.input:invalid.input:not(:placeholder-shown).input:not(:focus) {
+  border: 1px solid #e55454;
+  + .titleErrText {
+    display: block;
+  }
+}
+
+.textarea:invalid.textarea:not(:placeholder-shown).textarea:not(:focus) {
+  border: 1px solid #e55454;
+
+  + .titleErrTextArea {
+    display: block;
+  }
+}
+
 .input,
 .textarea,
 .select {
