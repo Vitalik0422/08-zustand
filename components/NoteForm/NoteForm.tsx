@@ -24,9 +24,8 @@ const NoteForm = ({ onClose }: NoteFormProps) => {
     onSuccess: (note) => {
       queryClient.invalidateQueries({ queryKey: ['notes'] });
       toast.success(`Note ${note.title} was created`);
-      onClose();
       clearDraft();
-      toast.success(`${note.title} was created`);
+      onClose();
     },
     onError: (error) => {
       toast.error(error.message);
@@ -82,7 +81,7 @@ const NoteForm = ({ onClose }: NoteFormProps) => {
           required
         />
         <span className={css.titleErrTextArea}>
-          This field cannot be empty and must be 2 to 50 characters long.
+          This field cannot be empty and must be 3 to 150 characters long.
         </span>
       </div>
       <div className={css.formGroup}>

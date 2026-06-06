@@ -18,11 +18,11 @@ type NotesFilterListClientProps = {
 
 const NotesFilterListClient = ({ tag }: NotesFilterListClientProps) => {
   const [page, setPage] = useState<number>(1);
-  const [searchQuery, setSearchQuey] = useState<string>('');
+  const [searchQuery, setSearchQuery] = useState<string>('');
   const [search] = useDebounce(searchQuery, 1000);
 
   const { data, isLoading, error } = useQuery({
-    queryKey: ['notes', { page: page, slug: tag, search: search }],
+    queryKey: ['notes', { page: page, tag: tag, search: search }],
     queryFn: () =>
       (tag as string) === 'all'
         ? fetchNotes(search, page)
@@ -34,7 +34,7 @@ const NotesFilterListClient = ({ tag }: NotesFilterListClientProps) => {
   });
 
   const handleSearchNoteInput = (e: ChangeEvent<HTMLInputElement>) => {
-    setSearchQuey(e.target.value);
+    setSearchQuery(e.target.value);
     setPage(1);
   };
   const handleChangePage = (selectedItem: { selected: number }) => {

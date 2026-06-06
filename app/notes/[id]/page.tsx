@@ -35,6 +35,7 @@ export const generateMetadata = async ({
       description,
       type: 'website',
       siteName: 'NoteHub',
+      url:`/notes/${id}`,
       images: [
         {
           url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',

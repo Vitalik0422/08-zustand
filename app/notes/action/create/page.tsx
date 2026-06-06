@@ -17,6 +17,7 @@ export const metadata: Metadata = {
       'Create a new note in NoteHub with title, content, and category.',
     type: 'website',
     siteName: 'Create Note | NoteHub',
+    url:'/notes/create',
     images: [
       {
         url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',

@@ -14,6 +14,9 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_NOTEHUB_DOMAIN ?? 'http://localhost:3000',
+  ),
   title: 'NoteHub',
   description: 'Plan every day with NoteHub',
   robots: {
